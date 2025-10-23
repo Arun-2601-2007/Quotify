@@ -1,69 +1,39 @@
 const quotes = [
-  // {
-  //   author: "Albert Einstein",
-  //   text: "Life is like riding a bicycle. To keep your balance, you must keep moving.",
-  //   url: "https://example.com/einstein-balance"
-  // },
-  // {
-  //   author: "Oscar Wilde",
-  //   text: "Be yourself; everyone else is already taken.",
-  //   url: "https://example.com/oscarwilde-yourself"
-  // },
-  // {
-  //   author: "Mahatma Gandhi",
-  //   text: "Be the change that you wish to see in the world.",
-  //   url: "https://example.com/gandhi-change"
-  // },
-  // {
-  //   author: "Mark Twain",
-  //   text: "The secret of getting ahead is getting started.",
-  //   url: "https://example.com/marktwain-started"
-  // },
-  // {
-  //   author: "Steve Jobs",
-  //   text: "Stay hungry, stay foolish.",
-  //   url: "https://example.com/stevejobs-hungry"
-  // },
-  // {
-  //   author: "Eleanor Roosevelt",
-  //   text: "The future belongs to those who believe in the beauty of their dreams.",
-  //   url: "https://example.com/roosevelt-future"
-  // },
-  // {
-  //   author: "Confucius",
-  //   text: "It does not matter how slowly you go as long as you do not stop.",
-  //   url: "https://example.com/confucius-progress"
-  // },
-  // {
-  //   author: "Nelson Mandela",
-  //   text: "The greatest glory in living lies not in never falling, but in rising every time we fall.",
-  //   url: "https://example.com/mandela-glory"
-  // },
-  // {
-  //   author: "Dr. Seuss",
-  //   text: "Don't cry because it's over, smile because it happened.",
-  //   url: "https://example.com/drseuss-smile"
-  // },
-  // {
-  //   author: "Mother Teresa",
-  //   text: "Spread love everywhere you go. Let no one ever come to you without leaving happier.",
-  //   url: "https://example.com/motherteresa-love"
-  // },
-  // {
-  //   author: "Oscar Wilde",
-  //   text: "Be yourself; everyone else is already taken.",
-  //   url: "https://example.com/oscarwilde-yourself"
-  // },
-  // {
-  //   author: "Oscar Wilde",
-  //   text: "Be yourself; everyone else is already taken.",
-  //   url: "https://example.com/oscarwilde-yourself"
-  // },
-  // {
-  //   author: "Oscar Wilde",
-  //   text: "Be yourself; everyone else is already taken.",
-  //   url: "https://example.com/oscarwilde-yourself"
-  // }
+   {
+    "author": "Audrey Hepburn.",
+    "text": "Nothing is impossible, the word itself says ‘I’m possible.",
+    "url": "https://res.cloudinary.com/dmxrppnpy/image/upload/v1761149604/quotify_DEV/p1gcmm8fkxwofy0xkzsk.jpg"
+  },
+  {
+    "author": "Albert Einstein",
+    "text": "Life is like riding a bicycle. To keep your balance, you must keep moving.",
+    "url": "https://res.cloudinary.com/dmxrppnpy/image/upload/v1761149903/quotify_DEV/xk8vqevmeppjmiukepvc.jpg"
+  },
+  {
+    "author": "Maya Angelou",
+    "text": "You will face many defeats in life, but never let yourself be defeated.",
+    "url": "https://res.cloudinary.com/dmxrppnpy/image/upload/v1761150351/quotify_DEV/ixistl9bbrijpvlvuu0w.jpg"
+  },
+  {
+    "author": "Steve Jobs",
+    "text": "Your work is going to fill a large part of your life, so love what you do.",
+    "url": "https://res.cloudinary.com/dmxrppnpy/image/upload/v1761150911/quotify_DEV/lvm5bbploqha1fjcpvum.jpg"
+  },
+  {
+    "author": "Jerry Dunn",
+    "text": "Don’t limit your challenges — challenge your limits.",
+    "url": "https://res.cloudinary.com/dmxrppnpy/image/upload/v1761209557/quotify_DEV/pk231wsfpmeo5d57caea.jpg"
+  },
+  {
+    "author": "Winston Churchill",
+    "text": "Success is not final, failure is not fatal: it is the courage to continue that counts",
+    "url": "https://res.cloudinary.com/dmxrppnpy/image/upload/v1761210256/quotify_DEV/rs44ij3dllui6cqtzxb9.jpg"
+  },
+  {
+    "author": "William Butler Yeats",
+    "text": "Do not wait to strike till the iron is hot, but make it hot by striking.",
+    "url": "https://res.cloudinary.com/dmxrppnpy/image/upload/v1761216248/quotify_DEV/q6omz3qlwzkevluumkhp.jpg"
+  }
 ];
 
 module.exports = {quotes};
