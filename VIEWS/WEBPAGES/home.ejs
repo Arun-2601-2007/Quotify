@@ -1,0 +1,111 @@
+<% layout('LAYOUTS/boilerplate') %>
+
+<style>
+    @media (max-width: 768px) {
+        .outer{
+            width: 99%;
+            padding: 0px;
+        }
+    }
+    .outer {
+       
+        border-radius: 10px;
+    }
+    .container {
+        width: 100%;
+        padding-left:10% ;
+        padding-right: 10%;
+       
+    }
+    .btn{
+        color: black;
+        background-color: rgb(164, 162, 162);
+        width: 15rem;
+        font-weight:bold ;
+    }
+    .btn:hover {
+        border: 2px solid black;
+    }
+    #authorForm .special {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center; 
+    width: 100%;
+    gap: 10px;
+}
+
+#authorInput {
+    width: 80%; 
+    max-width: 400px;
+    display: block;
+    text-align: center;
+}
+    
+    
+</style>
+
+<body>
+    <%- include('../INCLUDES/navbar.ejs') %>
+    <%- include("../INCLUDES/flash.ejs") %>
+        <div class="container text-center p-3 mt-5  ">
+            <h2><b >Welcome to Quotify</b></h2>
+            <p>Welcome to Quotify! Here you can find quotes to inspire you, make you think, or just bring a smile to your day. Browse, discover, and enjoy quotes from all kinds of authors and topics.</p>
+        </div>
+    
+    <div class="container text-center p-4 outer mb-5">
+        
+        <div class="row flex-column"  >
+            <div class="col  mb-2">
+                
+                <form method="GET" action="/api/quotes/random">
+                    
+                    <button class="btn" type="submit">GET RANDOM QUOTE</button>
+                </form>
+            <div class="col mt-3 mb-2">
+                <form method="GET" action="/api/quotes/new">
+                    
+                    <button class="btn">ADD A QUOTE</button>
+                </form>
+            </div>
+            <div class="col mt-3 mb-2">
+                <form method="GET" action="/api/quotes">
+                    
+                    <button class="btn">SEE ALL QUOTES</button>
+                </form>
+            </div>
+            <div class="col mt-3 mb-2">
+                
+                    <form method="GET" id="authorForm"  >
+                    
+                    <div class="row flex-column " style="justify-content: center; align-items:center;">
+                        
+                    <div class="col">
+                        <button class="btn mb-3" >GET AUTHOR QUOTES</button>
+                        <div class="special">
+                            
+                    <input class="form-control" id="authorInput" style="display: block;" name="authorName" placeholder="Enter Author name">
+                        </div>
+                    </div>
+                    </div>
+                </form>
+                
+                
+            </div>
+            </div>
+        </div>
+    </div>
+
+
+    <%- include('../INCLUDES/footer.ejs') %>
+</body>
+
+<script>
+document.getElementById('authorForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  const author = document.getElementById('authorInput').value.trim();
+  if (author) {
+    window.location.href = `/api/quotes/author/${author}`;
+  }
+});
+</script>

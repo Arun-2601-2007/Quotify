@@ -1,0 +1,65 @@
+<% layout('LAYOUTS/boilerplate') %>
+<style>
+    .card {
+        background-color: white;
+        border: 1px solid black;
+    border-radius: 10px;
+    
+    }
+     img {
+    height: 18rem;
+  }
+    i{
+      color: blue;
+    }
+    .box {
+       border: 2px solid black;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    }
+    .card .card-img-top {
+    border-radius: 5px;
+  }
+  .rad {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+</style>
+
+<body>
+  <%- include('../INCLUDES/navbar.ejs') %>
+  <%- include("../INCLUDES/flash.ejs") %>
+  <div class="container ">
+    <div class="container">
+      <div
+        class="container box mt-5 mb-5"
+        style="background-color: white"
+      >
+      <h2 class="text-center mt-1">All Quotes</h2>
+      
+        <div class="row justify-content-center">
+            <% for(let quote of quotes) {%>
+                    <div class="card m-2" style="width: 18rem">
+            <img
+              class="card-img-top mt-2"
+              src="<%= quote.url %>"
+              alt="Card image cap"
+            />
+            <div class="card-body">
+              <p class="card-text text-center" ><%= quote.text %></p>
+              <p class="card-text" style="text-align: end">
+                <i>- <%= quote.author %></i> 
+              </p>
+            </div>
+          </div>
+
+            <% } %>
+          
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <%- include('../INCLUDES/footer.ejs') %>
+</body>

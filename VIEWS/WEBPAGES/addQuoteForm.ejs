@@ -1,0 +1,63 @@
+<% layout('LAYOUTS/boilerplate') %>
+
+    <style>
+        @media(min-width : 768px){
+            .elements {
+                width: 50%;
+                align-items: center;
+            }
+            .row{
+                align-items: center;
+            }
+        }
+        .btn{
+        color: black;
+        background-color: rgb(164, 162, 162);
+        width: 10rem;
+        font-weight:bold ;
+    }
+    .btn:hover {
+        border: 2px solid black;
+    }
+    </style>
+
+    <body>
+        <%- include('../INCLUDES/navbar.ejs') %>
+        <%- include("../INCLUDES/flash.ejs") %>
+            <div class="text-center container" >
+                <div class="mt-5" style="background-color: white" style="width: 50%" >
+                    <h2 class="text-center">Add Quote</h2>
+                    <form action="/api/quotes" method="POST" class="mb-3 needs-validation"
+                        enctype="multipart/form-data">
+                        <div class="row justify-content-center flex-column">
+                            <div class="col-md-12 mt-2 elements">
+                                <div class="input-group mb-3">
+
+                                    <input type="text" name="author" class="form-control"
+                                        aria-label="Sizing example input" placeholder="Enter the author name"
+                                        aria-describedby="inputGroup-sizing-default" required />
+                                </div>
+                            </div>
+                            <div class="col-md-12 elements">
+                                <div class="form-floating col-md-12 mt-2 " >
+                                <textarea class="form-control" name="quote" placeholder="Leave a comment here" id="floatingTextarea2"
+                                    style="height: 100px" required></textarea>
+                                <label for="floatingTextarea2">Write the quote here</label>
+                            </div>
+                            </div>
+                            <div class="col-md-12 mt-2 elements">
+                                <div class="input-group mb-3">
+                                    <input type="file" class="form-control" id="inputGroupFile01" name="image"
+                                    />
+                                </div>
+                            </div>
+                            <div class="col-md-12 mt-2">
+                                <button type="submit" class="btn">ADD</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <%- include('../INCLUDES/footer.ejs') %>
+    </body>

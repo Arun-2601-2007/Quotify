@@ -1,0 +1,38 @@
+<% layout('LAYOUTS/boilerplate') %>
+<style>
+  .card {
+    background-color: white;
+
+    border-radius: 10px;
+    border: 2px solid black;
+  }
+  .card .card-img-top {
+    border-radius: 5px;
+  }
+  i {
+    
+    color: blue;
+  }
+  img {
+    height: 18rem;
+  }
+</style>
+<body>
+  <%- include('../INCLUDES/navbar.ejs') %>
+<%- include("../INCLUDES/flash.ejs") %>
+  <div class="row flex-column text-center mt-5" style="align-items: center">
+    <div class="card" style="width: 18rem">
+      <img
+        class="card-img-top mt-2"
+        src="<%= quote.url%>"
+        alt="Card image cap"
+      />
+      <div class="card-body">
+        <p class="card-text text-center" ><%= quote.text %></p>
+        <p class="card-text" style="text-align: end"><i>- <%= quote.author %></i></p>
+      </div>
+    </div>
+  </div>
+
+  <%- include('../INCLUDES/footer.ejs') %>
+</body>
